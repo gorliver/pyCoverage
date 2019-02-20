@@ -5,7 +5,7 @@ But pyCoverage can use multiple process and the run very fast.
 Run pyCoverage using 8 threads:
 
 ```{bash}
-pyCoverage.py  bam_sorted.bam interval.bed 8 > interval.cov
+pyCoverage.py bam_sorted.bam interval.bed 8 > interval.cov
 ```
 
 The counts are added to the end of each line in `interval.bed`.
@@ -17,9 +17,9 @@ awk '$1==4' interval.bed | pyCoverage.py  bam_sorted.bam - 16 > interval_chr4.co
 
 Bam file must be sorted and indexed.
 
-Which means pyCoverage will use 40 threads if the threads number is not specified:
+pyCoverage will use 40 threads if the threads number is not specified:
 
 ```{bash}
-pyCoverage.py  bam_sorted.bam interval.bed > interval.cov
+pyCoverage.py bam_sorted.bam interval.bed > interval.cov
 ```
 will use 40 threads.
