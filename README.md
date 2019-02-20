@@ -14,3 +14,10 @@ awk '$1==4' interval.bed | pyCoverage.py  bam_sorted.bam - 16 > interval_chr4.co
 ```
 
 Bam file must be sorted and indexed.
+
+Which means pyCoverage will use 40 threads if the threads number is not specified:
+
+```{bash}
+pyCoverage.py  bam_sorted.bam interval.bed > interval.cov
+```
+will use 40 threads.
