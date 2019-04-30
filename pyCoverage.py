@@ -110,7 +110,7 @@ if __name__ == "__main__":
         exit()
 
     if len(sys.argv) == 4:
-        threads = sys.argv[3]
+        threads = int(sys.argv[3])
 
     bam_file = sys.argv[1]
     bed_file = sys.argv[2]
